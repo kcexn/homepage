@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<body id="home" class="bg-light">
+<body id="home" class="bg-light mb-5 pb-5">
   <div class="container-fluid bg-light">
     <header id="main-header">
       <div class="row">
@@ -104,65 +104,19 @@ layout: default
     </section>
 
     <!-- WORK MODALS -->
-    <div class="modal fade" id="EricssonGraduateModal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-secondary text-light">
-            <h5 class="modal-title">
-              Ericsson, Feb 2019 &ndash;
-            </h5>
-            <button class="close" type="button" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body bg-tertiary text-light">
-            <h5 class="lead">
-              Position: Graduate Integration Engineer
-            </h5>
-            <p>
-              Started a graduate position with Ericsson upon graduating from
-              Monash University with a bachelors degree in Computer Systems
-              Engineering with Honours.
-            </p>
-          </div>
-          <div class="modal-footer bg-secondary">
-            <button type="button" class="btn btn-tertiary" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Ericsson Graduate Modal -->
+    {% include modals.html id="EricssonGraduateModal" title="Ericsson, Feb 2019
+    &ndash;" heading="Position: Summer Intern" description="Started a graduate
+    position with Ericsson upon graduating from Monash University with a
+    bachelors degree in Computer Systems Engineering with Honours." %}
 
-    <div class="modal fade" id="TelstraInternModal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-secondary text-light">
-            <h5 class="modal-title">
-              Telstra, Nov 2017 &ndash; Feb 2018
-            </h5>
-            <button class="close" type="button" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body bg-tertiary text-light">
-            <h5 class="lead">
-              Position: Summer Intern
-            </h5>
-            <p>
-                Worked as part of the Broadsoft Trunking and Product Engineering team. 
-                As the intern I developed an internal web-app that displayed statistics 
-                about server configurations to help with the automation of the VoIP products. 
-            </p>
-          </div>
-          <div class="modal-footer bg-secondary">
-            <button type="button" class="btn btn-tertiary" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Telstra Intern Modal -->
+    {% include modals.html id="TelstraInternModal" title="Telstra, Nov 2017
+    &ndash; Feb 2018" heading="Position: Graduate Integration Engineer"
+    description="Worked as part of the Broadsoft Trunking and Product
+    Engineering team. As the intern I developed an internal web-app that
+    displayed statistics about server configurations to help with the automation
+    of the VoIP products." %}
 
     <!-- PROJECTS HEADER -->
     <section id="projects-header">
@@ -174,41 +128,38 @@ layout: default
     <!-- PROJECTS -->
     <section id="projects">
       <div class="row">
-        <div class="col bg-light p-5">
-          <h3 class="pb-4">What Have I Worked On?</h3>
-          <div class="card-deck">
-            <div class="card fill-card-deck-space"></div>
-            <div class="card bg-secondary">
-              <div class="card-header">
-                <h4 class="card-title text-light">Final Year Project</h4>
-              </div>
-              <div class="card-body bg-tertiary">
-                <p class="card-text text-light">
-                  Dr. Gayathri Kongara at Monash University supervised a project
-                  where I studied adaptive signal processing techniques to track
-                  distortions introduced by the multipath wireless channel and
-                  equalise them. The majority of the project was done in
-                  simulation with the assistance of MATLAB and a prototype was
-                  developed on a National Instruments Software Defined Radio as
-                  a proof of concept.
-                  <a
-                    href="blog/study/2019/01/25/Final-Year-Project.html"
-                    class="btn btn-outline-light px-2 py-0"
-                    >Read more...</a
-                  >
-                </p>
-              </div>
-              <div class="card-footer">
-                <h6 class="text-light">
-                  Dates: February 2018 &ndash; November 2018
-                </h6>
-              </div>
-            </div>
-            <div class="card fill-card-deck-space"></div>
-          </div>
+        <div class="col bg-light mt-5">
+          <h3>
+            What Have I Worked On?
+          </h3>
         </div>
       </div>
+      <div class="row pb-4">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-sm-12">
+          <div class="list-group mt-3">
+            <a
+              href="#FinalYearProjectModal"
+              class="list-group-item list-group-item-action text-center"
+              data-toggle="modal"
+            >
+              Final Year Project, 2018
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
     </section>
+
+    <!-- Project Modals -->
+    <!-- FYP Modal -->
+    {% include modals.html id="FinalYearProjectModal" title="Final Year Project"
+    heading="" description="Dr. Gayathri Kongara at Monash University supervised
+    a project where I studied adaptive signal processing techniques to track
+    distortions introduced by the multipath wireless channel and equalise them.
+    The majority of the project was done in simulation with the assistance of
+    MATLAB and a prototype was developed on a National Instruments Software
+    Defined Radio as a proof of concept." %}
 
     <!-- EDUCATION HEADER -->
     <section id="education-header">
@@ -218,7 +169,41 @@ layout: default
     </section>
 
     <!-- EDUCATION -->
-    <section id="education">
+    <section id="projects">
+      <div class="row">
+        <div class="col bg-light mt-5">
+          <h3>
+            Where Have I Studied?
+          </h3>
+        </div>
+      </div>
+      <div class="row pb-4">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-sm-12">
+          <div class="list-group mt-3">
+            <a
+              href="#MonashUniversityModal"
+              class="list-group-item list-group-item-action text-center"
+              data-toggle="modal"
+            >
+              Monash University, 2015 &ndash; 2018
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </section>
+
+    <!-- Education Modals -->
+    {% include modals.html id="MonashUniversityModal" 
+    title="Degree: Bachelor of Computer Systems Engineering (Honours)"
+    heading="" description="A healthy mix of electronics engineering and software
+    engineering. Heavy focus on embedded systems related
+    technology, FPGA's, and RToS's, as well as communications related technology, i.e. signal
+    processing, wireless communication, optical communication. The
+    degree included some analogue electronics and control systems." %}
+
+    <!-- <section id="education">
       <div class="row">
         <div class="col bg-light p-5">
           <h3 class="pb-4">Where Have I Studied?</h3>
@@ -255,9 +240,9 @@ layout: default
         </div>
       </div>
     </section>
-  </div>
+  </div> -->
 
-  <footer id="main-footer" class="py-5 fixed-bottom">
+  <footer id="main-footer" class="fixed-bottom mb-5">
     <a href="#home" class="btn btn-outline-info rounded-circle return-home"
       ><span class="fas fa-angle-up fa-2x text-dark"></span
     ></a>
