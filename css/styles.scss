@@ -1,4 +1,49 @@
 ---
-
 ---
+
 @import "main";
+#main-header img {
+  width: 100%;
+  height: 100%;
+  margin-left: -15px;
+}
+
+.return-home {
+  float: right;
+  margin-right: 3rem;
+  display: none;
+}
+
+.bg-dark-blue {
+  background: #1a1a1a;
+}
+
+.fill-card-deck-space {
+  background: inherit;
+  border-width: 0px;
+}
+
+#bio-blog-anchor {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+#bio-blog-anchor:hover {
+  color: blue;
+}
+
+.list-group-item-action:hover {
+  background-color: $light-purple;
+  color: $light;
+}
+
+@media (max-width: 992px) {
+  #main-header img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+  #main-header .responsive-image {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
