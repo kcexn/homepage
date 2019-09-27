@@ -47,7 +47,7 @@ layout: default
           <p class="lead">
             I'm a graduate computer engineer who wants to find technical
             solutions to today's problems. Read about what I'm doing over at my
-            <a href="blog/" id="bio-blog-anchor">blog</a>.
+            <a href="{{ site.baseurl }}/blog.html" id="bio-blog-anchor">blog</a>.
           </p>
           <div class="row no-gutters">
             <div class="col-sm-3"></div>
@@ -137,7 +137,14 @@ layout: default
       <div class="row pb-4">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-sm-12">
-          <div class="list-group mt-3">
+          <div class="list-group">
+            <a
+              href="#KevinAsAServiceModal"
+              class="list-group-item list-group-item-action text-center"
+              data-toggle="modal"
+            >
+              Kevin As A Service (Hobby), 2019
+            </a>
             <a
               href="#FinalYearProjectModal"
               class="list-group-item list-group-item-action text-center"
@@ -160,6 +167,12 @@ layout: default
     The majority of the project was done in simulation with the assistance of
     MATLAB and a prototype was developed on a National Instruments Software
     Defined Radio as a proof of concept." %}
+
+    {% include modals.html id="KevinAsAServiceModal" 
+    title="Kevin As A Service" heading="Hobby project involving Angular, 
+    Firebase, and Google's oAuth2 playground" description="Developed an Angular web app 
+    with a firebase backend <a href='sendgridmail-228a0.web.app'>here</a> so that people can 
+    contact me via web form. Read my blog post about it." %}
 
     <!-- EDUCATION HEADER -->
     <section id="education-header">
